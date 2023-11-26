@@ -1,0 +1,88 @@
+@import "../assets/scss/abstracts/variables";
+@import "../assets/scss/abstracts/mixins";
+
+.toolbar {
+    background-color: black;
+    color: $color-etsa;
+    transition: all .5s;
+    z-index: 5;
+    height: 64px;
+    
+    &__icon{
+        transition: all .5s;
+        opacity: 0;
+        width: 0;
+        display: none;
+        &:hover{
+            transform: rotate(540deg);
+        }
+
+        @include respond(tab-port) {
+            opacity: 1;
+            width:auto;
+            display: block;
+        }
+    }
+
+    &__spacer {
+        flex: 1 1 auto;
+    }
+      
+    &__menuItem{
+        transition: all .5s;
+        padding: 2.2em .8em;
+        &:hover{
+            background-color: rgb(87, 85, 85);
+            color: white;
+        }
+        
+        @include respond(tab-port) {
+            opacity: 0;
+            width:0;
+            display: none;
+        }
+        
+
+
+
+    }
+}
+
+.selected-menu-item {
+    border-left-color:red ;
+    background-color: rgb(87, 85, 85);
+    color: white;
+}
+
+.sidenav__bar{
+    background-color: black;
+    display: none;
+
+    ul{
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            margin: 10px 0;
+            padding: 2px;
+            a {
+                color: $color-etsa;
+
+                &:hover {
+                    background-color: rgb(87, 85, 85);
+                    color: white;
+                }
+            }
+        }
+    }
+
+    @include respond(tab-port){
+        display: block;
+    }
+
+
+
+}
+
+
