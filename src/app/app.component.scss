@@ -1,6 +1,13 @@
 @import "../assets/scss/abstracts/variables";
 @import "../assets/scss/abstracts/mixins";
 
+.selected-menu-item {
+    background-color: rgb(87, 85, 85);
+    color: white;
+
+
+}
+
 .toolbar {
     background-color: black;
     color: $color-etsa;
@@ -49,47 +56,24 @@
 }
 
 
-.link {
-    &:hover {
-        background-color: rgb(87, 85, 85);
-        color: white;
-    }
-}
 
-.selected-menu-item {
-    background-color: rgb(87, 85, 85);
-    color: white;
+.menu {
+   background-color: black !important;
 
 
-  }
+   
+    &__item{
 
-.sidenav__bar{
-    background-color: black;
-    display: none;
+        &:hover {
+            color: $color-etsa;
+        }
 
-
-
-    ul{
-        margin: 0;
-        padding: 0;
-
-        li {
-            list-style-type: none;
-            margin: 10px 0;
-            padding: 2px;
-            a {
-                color: $color-etsa;
-                
-            }
+        mat-icon{
+            color: $color-etsa;
         }
     }
-
-    @include respond(tab-port){
-        display: block;
-    }
-
-
-
 }
+
+
 
 

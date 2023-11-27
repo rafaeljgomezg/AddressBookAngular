@@ -5,6 +5,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {CdkMenu, CdkMenuItem, CdkMenuTrigger} from '@angular/cdk/menu';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @Component({
@@ -18,7 +20,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
-    RouterModule
+    RouterModule,
+    CdkMenu,
+    CdkMenuItem,
+    CdkMenuTrigger,
+    MatMenuModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
