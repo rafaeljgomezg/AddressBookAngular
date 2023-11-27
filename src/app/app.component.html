@@ -6,18 +6,18 @@
   </button>
   <span class="toolbar__title">Address Book</span>
   <span class="toolbar__spacer"></span>
-  <a mat-button class="toolbar__menuItem" [routerLink]="['/']" ><mat-icon>home</mat-icon>Home</a>
-  <a mat-button class="toolbar__menuItem" [routerLink]="['/contacts']"><mat-icon >people</mat-icon>Contacts</a>
-  <a mat-button class="toolbar__menuItem" [routerLink]="['/newcontact']"><mat-icon >person_add</mat-icon>New Contact</a>
+  <a mat-button class="toolbar__menuItem" [routerLink]="['/home']" routerLinkActive="selected-menu-item"><mat-icon>home</mat-icon>Home</a>
+  <a mat-button class="toolbar__menuItem" [routerLink]="['/contacts']" routerLinkActive="selected-menu-item"><mat-icon >people</mat-icon>Contacts</a>
+  <a mat-button class="toolbar__menuItem" [routerLink]="['/newcontact']" routerLinkActive="selected-menu-item"><mat-icon >person_add</mat-icon>New Contact</a>
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
   
   <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]=64 class="sidenav__bar" mode="side"> 
     <ul>
-      <li><a mat-button class="sidenav__bar--menuItem" [routerLink]="['/']" (click)="sidenav.close()" ><mat-icon >home</mat-icon>Home</a></li>
-      <li><a mat-button class="sidenav__bar--menuItem" [routerLink]="['/contacts']" (click)="sidenav.close()" ><mat-icon >people</mat-icon>Contacts</a></li>
-      <li><a mat-button class="sidenav__bar--menuItem" [routerLink]="['/newcontact']" (click)="sidenav.close()" ><mat-icon >person_add</mat-icon>New Contact</a></li>
+      <div class="link" routerLinkActive="selected-menu-item"><li><a mat-button class="sidenav__bar--menuItem" [routerLink]="['/home']" (click)="sidenav.close()"><mat-icon >home</mat-icon>Home</a></li></div>
+      <div class="link" routerLinkActive="selected-menu-item"> <li><a mat-button class="sidenav__bar--menuItem" [routerLink]="['/contacts']" (click)="sidenav.close()" routerLinkActive="selected-menu-item"><mat-icon >people</mat-icon>Contacts</a></li></div>
+      <div class="link" routerLinkActive="selected-menu-item"><li><a mat-button class="sidenav__bar--menuItem" [routerLink]="['/newcontact']" (click)="sidenav.close()" routerLinkActive="selected-menu-item"><mat-icon >person_add</mat-icon>New Contact</a></li></div>
     </ul>
   </mat-sidenav>
 

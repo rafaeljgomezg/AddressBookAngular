@@ -48,15 +48,26 @@
     }
 }
 
+
+.link {
+    &:hover {
+        background-color: rgb(87, 85, 85);
+        color: white;
+    }
+}
+
 .selected-menu-item {
-    border-left-color:red ;
     background-color: rgb(87, 85, 85);
     color: white;
-}
+
+
+  }
 
 .sidenav__bar{
     background-color: black;
     display: none;
+
+
 
     ul{
         margin: 0;
@@ -68,11 +79,7 @@
             padding: 2px;
             a {
                 color: $color-etsa;
-
-                &:hover {
-                    background-color: rgb(87, 85, 85);
-                    color: white;
-                }
+                
             }
         }
     }
