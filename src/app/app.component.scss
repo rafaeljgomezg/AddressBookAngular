@@ -1,12 +1,19 @@
 @import "../assets/scss/abstracts/variables";
 @import "../assets/scss/abstracts/mixins";
 
+
 .toolbar {
     background-color: black;
     color: $color-etsa;
     transition: all .5s;
     z-index: 5;
     height: 64px;
+    
+    /* STICKY TOOLBAR AT TOP */
+    position: sticky;
+    top: 0;
+    /****************************/
+
     
     &__icon{
         transition: all .5s;
