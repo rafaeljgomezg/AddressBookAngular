@@ -1,32 +1,25 @@
 @import "../assets/scss/abstracts/variables";
 @import "../assets/scss/abstracts/mixins";
 
-.selected-menu-item {
-    background-color: rgb(87, 85, 85);
-    color: white;
 
-
-}
 
 .toolbar {
-    background-color: black;
     color: $color-etsa;
     transition: all .5s;
     z-index: 5;
     height: 64px;
+    position:sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
     
     &__icon{
-        transition: all .5s;
-        opacity: 0;
-        width: 0;
+        transition: all .3s;
         display: none;
         &:hover{
-            transform: rotate(540deg);
+            transform: rotate(270deg);
         }
 
         @include respond(tab-port) {
-            opacity: 1;
-            width:auto;
             display: block;
         }
     }
@@ -40,28 +33,21 @@
         padding: 2.2em .8em;
         &:hover{
             background-color: rgb(87, 85, 85);
-            color: white;
         }
         
         @include respond(tab-port) {
-            opacity: 0;
-            width:0;
             display: none;
         }
-        
-
-
 
     }
 }
 
+.selected-menu-item {
+    background-color: rgb(87, 85, 85);
+}
 
 
 .menu {
-   background-color: black !important;
-
-
-   
     &__item{
 
         &:hover {
@@ -71,6 +57,12 @@
         mat-icon{
             color: $color-etsa;
         }
+    }
+}
+
+::ng-deep .menu {
+    @include respond(tab-port-inverse) {
+        display: none;
     }
 }
 

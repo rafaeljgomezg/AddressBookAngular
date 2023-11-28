@@ -51,6 +51,11 @@ ORDER: Base + typography -> gebneral layout -> page layaout -> components
     @if $breakpoint == tab-port {  //MIXINs Accept this clause
         @media (max-width: 56.25em){@content}; // -> 900px
     }
+
+    @if $breakpoint == tab-port-inverse {  //MIXINs Accept this clause
+        @media (min-width: 56.25em){@content}; // -> 900px
+    }
+
     @if $breakpoint == tab-land {  //MIXINs Accept this clause
         @media (max-width: 75em){@content}; // -> 1200px
     }

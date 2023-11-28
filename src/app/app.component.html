@@ -1,6 +1,6 @@
 
 
-<mat-toolbar class="toolbar">
+<mat-toolbar class="toolbar mat-elevation-z4">
   <button mat-icon-button class="toolbar__icon" aria-label="Icon-button with menu icon" [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
   </button>
@@ -12,22 +12,20 @@
 </mat-toolbar>
 
 
-<mat-menu class="menu" #menu="matMenu" xPosition="after">
+<mat-menu class="menu" #menu="matMenu" >
   <button class="menu__item" mat-menu-item [routerLink]="['/home']" routerLinkActive="selected-menu-item">
-    <mat-icon >home</mat-icon>
+    <mat-icon class="menu__item--icon" >home</mat-icon>
     <span>Home</span>
   </button>
   <button class="menu__item" mat-menu-item [routerLink]="['/contacts']" routerLinkActive="selected-menu-item">
-    <mat-icon>people</mat-icon>
+    <mat-icon class="menu__item--icon">people</mat-icon>
     <span>Contacts</span>
   </button>
   <button class="menu__item" mat-menu-item [routerLink]="['/newcontact']" routerLinkActive="selected-menu-item">
-    <mat-icon>person_add</mat-icon>
+    <mat-icon class="menu__item--icon">person_add</mat-icon>
     <span>New Contact</span>
   </button>
 </mat-menu>
-
-
 
 
 <router-outlet></router-outlet>
